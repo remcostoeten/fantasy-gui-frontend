@@ -1,6 +1,7 @@
 body {
-	background-color: $dark-accent-background;
-	background-color: $dark-background;
+	// background-color: $dark-accent-background;
+	// background-color: $dark-background;
+	background-color: $body-bg;
 	color: $light-text;
 }
 
@@ -11,6 +12,14 @@ h4,
 h5,
 h6 {
 	color: $light-text;
+}
+
+a {
+	text-decoration: none;
+	color: inherit !important;
+	cursor: link;
+	font-family: $font-primary;
+	font-weight: 500;
 }
 
 #settings {
@@ -27,14 +36,58 @@ $container-size: 1024px;
 
 	aside {
 		flex: 1 0 40%;
-		padding: $spacing;
+		padding: $spacing-xl * 1.5;
+		background-color: $dark-background;
+		border-radius: 16px 0 0 16px;
+		height: 100vh;
 
 		h1 {
-			padding-bottom: $spacing;
+			padding-bottom: $spacing-xl;
 		}
 	}
 
 	main {
 		flex: 1 0 75%;
+	}
+}
+
+.intro {
+	h2 {
+		font-size: 24px;
+		padding-bottom: $spacing-xl;
+	}
+
+	&__launch {
+		div {
+		}
+
+		a {
+			color: $link-color;
+			font-weight: 600;
+		}
+
+		img {
+			max-width: 40px;
+			max-height: 40px;
+			margin-right: $spacing;
+		}
+	}
+}
+
+.game {
+	&__csgo,
+	&__dota,
+	&__tf2 {
+		display: flex;
+		align-items: center;
+		padding: $spacing-s;
+		margin-bottom: $spacing;
+		background-color: $dark-accent-background;
+		border-radius: 8px;
+		cursor: pointer;
+
+		// &:not(:last-child) {
+		// 	border-bottom: 1px solid $border-color;
+		// }
 	}
 }

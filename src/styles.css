@@ -24,8 +24,7 @@ h3 {
 }
 
 body {
-  background-color: #262836;
-  background-color: #1f1d2c;
+  background-color: #403d51;
   color: #fbfbfb;
 }
 
@@ -36,6 +35,14 @@ h4,
 h5,
 h6 {
   color: #fbfbfb;
+}
+
+a {
+  text-decoration: none;
+  color: inherit !important;
+  cursor: link;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 #settings {
@@ -50,13 +57,40 @@ h6 {
 }
 .wrapper aside {
   flex: 1 0 40%;
-  padding: 12px;
+  padding: 36px;
+  background-color: #1f1d2b;
+  border-radius: 16px 0 0 16px;
+  height: 100vh;
 }
 .wrapper aside h1 {
-  padding-bottom: 12px;
+  padding-bottom: 24px;
 }
 .wrapper main {
   flex: 1 0 75%;
+}
+
+.intro h2 {
+  font-size: 24px;
+  padding-bottom: 24px;
+}
+.intro__launch a {
+  color: #a6a6ab;
+  font-weight: 600;
+}
+.intro__launch img {
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 12px;
+}
+
+.game__csgo, .game__dota, .game__tf2 {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 12px;
+  background-color: #262836;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .toggle-input {
