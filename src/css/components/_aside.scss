@@ -1,3 +1,5 @@
+@use '../core/animations';
+
 aside {
 	h2 {
 		font-size: 24px;
@@ -70,53 +72,9 @@ aside {
 				scale: 10;
 			}
 
-			@keyframes bgcard {
-				0% {
-					background: $light-text;
-				}
-
-				100% {
-					transform: rotate(25deg);
-				}
-			}
-
-			@keyframes bgcardTwo {
-				0% {
-					background: $color-primary;
-					transform: skew(15deg);
-					scale: 0.3;
-				}
-
-				100% {
-					transform: rotate(45deg);
-				}
-			}
 			img {
 				animation: rotate 1s infinite ease-in-out;
 				$scale: 0.7;
-				@keyframes rotate {
-					0% {
-						scale: $scale;
-						transform: rotate(0deg);
-					}
-
-					25% {
-						scale: $scale;
-					}
-
-					45% {
-						scale: calc($scale * 1.05);
-					}
-
-					65% {
-						scale: calc($scale * 1.1);
-					}
-
-					100% {
-						scale: $scale;
-						transform: rotate(360deg);
-					}
-				}
 			}
 		}
 

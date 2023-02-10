@@ -1,0 +1,45 @@
+@keyframes cardHover {
+	0% {
+		background: $light-text;
+	}
+
+	100% {
+		transform: rotate(25deg);
+	}
+}
+
+@keyframes cardHoverTwo {
+	0% {
+		background: $color-primary;
+		transform: skew(15deg);
+		scale: 0.3;
+	}
+
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		scale: $scale;
+		transform: rotate(0deg);
+	}
+
+	25% {
+		scale: $scale;
+	}
+
+	45% {
+		scale: calc($scale * 1.05);
+	}
+
+	65% {
+		scale: calc($scale * 1.1);
+	}
+
+	100% {
+		scale: $scale;
+		transform: rotate(360deg);
+	}
+}

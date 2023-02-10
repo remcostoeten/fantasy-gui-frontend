@@ -315,24 +315,6 @@ aside__launch img {
   display: block;
   scale: 10;
 }
-@keyframes bgcard {
-  0% {
-    background: #fbfbfb;
-  }
-  100% {
-    transform: rotate(25deg);
-  }
-}
-@keyframes bgcardTwo {
-  0% {
-    background: #545399;
-    transform: skew(15deg);
-    scale: 0.3;
-  }
-  100% {
-    transform: rotate(45deg);
-  }
-}
 .game__csgo:hover img, .game__dota:hover img, .game__tf2:hover img {
   animation: rotate 1s infinite ease-in-out;
 }
