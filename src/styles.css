@@ -364,6 +364,18 @@ user .welcome .profile {
   font-family: "Roboto", sans-serif !important;
   text-transform: lowercase;
 }
+login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1f1d2b;
+  border-radius: 16px;
+  z-index: 10;
+  padding: 24px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 @keyframes cardHover {
   0% {
     background: #fbfbfb;
