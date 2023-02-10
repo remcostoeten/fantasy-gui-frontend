@@ -69,30 +69,6 @@ a {
   flex: 1 0 75%;
 }
 
-.intro h2 {
-  font-size: 24px;
-  padding-bottom: 24px;
-}
-.intro__launch a {
-  color: #a6a6ab;
-  font-weight: 600;
-}
-.intro__launch img {
-  max-width: 40px;
-  max-height: 40px;
-  margin-right: 12px;
-}
-
-.game__csgo, .game__dota, .game__tf2 {
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  margin-bottom: 12px;
-  background-color: #262836;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 .toggle-input {
   position: absolute;
   left: 0;
@@ -282,4 +258,146 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+aside h2 {
+  font-size: 24px;
+  padding-bottom: 24px;
+}
+aside__launch a {
+  color: #a6a6ab;
+  font-weight: 600;
+}
+aside__launch img {
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 12px;
+}
+
+.game__csgo, .game__dota, .game__tf2 {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 12px;
+  background-color: #262836;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600px;
+  overflow: hidden;
+  position: relative;
+}
+.game__csgo:after, .game__dota:after, .game__tf2:after {
+  content: "";
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.game__csgo:before, .game__dota:before, .game__tf2:before {
+  content: "";
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.game__csgo:hover:after, .game__dota:hover:after, .game__tf2:hover:after {
+  animation: bgcard 1s;
+  opacity: 0.3;
+  display: blocck;
+  scale: 10;
+}
+.game__csgo:hover:before, .game__dota:hover:before, .game__tf2:hover:before {
+  animation: bgcardTwo 1s 15ms;
+  opacity: 0.3;
+  display: block;
+  scale: 10;
+}
+@keyframes bgcard {
+  0% {
+    background: #fbfbfb;
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+@keyframes bgcardTwo {
+  0% {
+    background: #545399;
+    transform: skew(15deg);
+    scale: 0.3;
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+.game__csgo:hover img, .game__dota:hover img, .game__tf2:hover img {
+  animation: rotate 1s infinite ease-in-out;
+}
+@keyframes rotate {
+  0% {
+    scale: 0.7;
+    transform: rotate(0deg);
+  }
+  25% {
+    scale: 0.7;
+  }
+  45% {
+    scale: 0.735;
+  }
+  65% {
+    scale: 0.77;
+  }
+  100% {
+    scale: 0.7;
+    transform: rotate(360deg);
+  }
+}
+.game__csgo img, .game__dota img, .game__tf2 img {
+  scale: 0.7;
+  padding-right: 12px;
+}
+
+user .welcome {
+  padding-bottom: 24px;
+}
+user .welcome__inner {
+  display: flex;
+  align-items: center;
+}
+user .welcome #userProfile {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+user .welcome__avatar {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background: red;
+  margin-right: 12px;
+}
+user .welcome .user {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+user .welcome .user--welcome {
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 400;
+}
+user .welcome .user--username {
+  color: #fbfbfb;
+  font-size: 18px;
+}
+user .welcome .profile {
+  display: flex;
+  font-size: 16px;
+  color: #75747c;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif !important;
+  text-transform: lowercase;
 }/*# sourceMappingURL=styles.css.map */

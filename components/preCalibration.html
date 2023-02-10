@@ -1,0 +1,22 @@
+<h2>Pre-Calibration Settings:</h2>
+<div class="toggle-switch">
+    <input id="toggle" class="toggle-input" type='checkbox' name="pure_mode_silence">
+    <label class="toggle-label" for="pure_mode_silence"></label>
+    <span>Silence </span>
+</div>
+<div class="toggle-switch">
+    <input id="toggle" class="toggle-input" type='checkbox' name="pure_mode_hypermode">
+    <label class="toggle-label" for="pure_mode_hypermode"></label>
+    <span>Constelia Hypermode</span>
+</div>
+<div class="toggle-switch">
+    <input id="toggle" class="toggle-input" type='checkbox' name="pure_mode_always_update">
+    <label class="toggle-label" for="pure_mode_always_update"></label>
+    <span>Download latest GUI</span>
+</div>
+<button disabled id="start_button" onclick="start_constellation()">Loading...</button>
+<button disabled id="hwid_spoofer" onclick="fantasy_cmd(this, 'hwid_spoofer')">HWID Spoofer/Trust Factor
+    Eraser</button>
+<button disabled id="reload_scripts" onclick="fantasy_cmd(this, 'reload_scripts')">Reload Lua
+    Scripts</button>
+<button disabled id="exit_button" onclick="fantasy_cmd(this, 'exit')">Exit</button>

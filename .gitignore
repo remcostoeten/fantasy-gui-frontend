@@ -5,3 +5,5 @@ src/JS/css.css.map
 src/css/styles.css.map
 src/styles.css.map
 src/JS/*
+node_modules/*
+package-lock.json
