@@ -318,25 +318,6 @@ aside__launch img {
 .game__csgo:hover img, .game__dota:hover img, .game__tf2:hover img {
   animation: rotate 1s infinite ease-in-out;
 }
-@keyframes rotate {
-  0% {
-    scale: 0.7;
-    transform: rotate(0deg);
-  }
-  25% {
-    scale: 0.7;
-  }
-  45% {
-    scale: 0.735;
-  }
-  65% {
-    scale: 0.77;
-  }
-  100% {
-    scale: 0.7;
-    transform: rotate(360deg);
-  }
-}
 .game__csgo img, .game__dota img, .game__tf2 img {
   scale: 0.7;
   padding-right: 12px;
@@ -382,4 +363,41 @@ user .welcome .profile {
   font-weight: 400;
   font-family: "Roboto", sans-serif !important;
   text-transform: lowercase;
+}
+@keyframes cardHover {
+  0% {
+    background: #fbfbfb;
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+@keyframes cardHoverTwo {
+  0% {
+    background: #545399;
+    transform: skew(15deg);
+    scale: 0.3;
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    scale: 0.7;
+    transform: rotate(0deg);
+  }
+  25% {
+    scale: 0.7;
+  }
+  45% {
+    scale: 0.735;
+  }
+  65% {
+    scale: 0.77;
+  }
+  100% {
+    scale: 0.7;
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=styles.css.map */

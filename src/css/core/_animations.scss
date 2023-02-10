@@ -1,6 +1,7 @@
+$scale: 0.7;
 @keyframes cardHover {
 	0% {
-		background: $light-text;
+		background: #fbfbfb;
 	}
 
 	100% {
@@ -10,7 +11,7 @@
 
 @keyframes cardHoverTwo {
 	0% {
-		background: $color-primary;
+		background: #545399;
 		transform: skew(15deg);
 		scale: 0.3;
 	}
