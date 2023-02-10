@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  font-family: "Roboto";
+}
+
+#settings {
+  transition: 250ms ease all;
+  opacity: 0;
+}/*# sourceMappingURL=styles.css.map */
