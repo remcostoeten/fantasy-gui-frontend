@@ -5,9 +5,58 @@ html {
   font-family: "Space Grotesk", sans-serif;
 }
 
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+body {
+  background-color: #262836;
+  background-color: #1f1d2c;
+  color: #fbfbfb;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fbfbfb;
+}
+
 #settings {
   transition: 250ms ease all;
   opacity: 0;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.wrapper aside {
+  flex: 1 0 40%;
+  padding: 12px;
+}
+.wrapper aside h1 {
+  padding-bottom: 12px;
+}
+.wrapper main {
+  flex: 1 0 75%;
 }
 
 .toggle-input {
@@ -22,9 +71,9 @@ html {
 }
 
 .toggle-label {
-  width: 75px;
-  height: 42px;
-  background: #ccc;
+  width: 36px;
+  height: 21px;
+  background: #2e303e;
   position: relative;
   display: inline-block;
   border-radius: 46px;
@@ -34,22 +83,22 @@ html {
 .toggle-label:after {
   content: "";
   position: absolute;
-  width: 42px;
-  height: 42px;
+  width: 21px;
+  height: 21px;
   border-radius: 100%;
   left: 0;
   top: 0;
   z-index: 2;
-  background: #fff;
+  background: #fbfbfb;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   transition: 0.4s;
 }
 
 .toggle-input:checked + .toggle-label {
-  background-color: #4bd865;
+  background-color: #545399;
 }
 .toggle-input:checked + .toggle-label:after {
-  left: 40px;
+  left: 20px;
 }
 
 p {
@@ -59,8 +108,144 @@ p {
 }
 
 .toggle-switch {
+  display: flex;
+  align-items: center;
   position: relative;
-  width: 75px;
-  height: 42px;
-  margin: auto;
+  margin-bottom: 8px;
+}
+.toggle-switch span {
+  margin-left: 8px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }/*# sourceMappingURL=styles.css.map */

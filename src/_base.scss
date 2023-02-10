@@ -1,4 +1,40 @@
+body {
+	background-color: $dark-accent-background;
+	background-color: $dark-background;
+	color: $light-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $light-text;
+}
+
 #settings {
 	transition: 250ms ease all;
 	opacity: 0;
+}
+
+$container-size: 1024px;
+
+.wrapper {
+	display: flex;
+	max-width: $container-size;
+	margin: 0 auto;
+
+	aside {
+		flex: 1 0 40%;
+		padding: $spacing;
+
+		h1 {
+			padding-bottom: $spacing;
+		}
+	}
+
+	main {
+		flex: 1 0 75%;
+	}
 }
