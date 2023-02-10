@@ -1,14 +1,15 @@
 <!--
     @title
-        fantasy.constellation Web GUI
+        fantasy.constellation Web GUI theme by Hoxyz
     @author
-        typedef
+        https://fantasy.cat/forums/index.php?members/hoxyz/
     @notes
-        Be aware that a lot of these settings are hardcoded.
+        Web gui for  Constellation based on the original GUI with plain HTML and no styling from typdeff. I implemented SCSS (compiles to css) variables to allow for easy change of themeing e.g. change the whole theme/color style with only changing a couple vars.
+        Started this project out of boredom without any specific goal and no design in mind. Along the way  I  just started putting stuff together. I've looked at project Pegasus as an example for some functions which increase user experinece. So shoutout to d4nny.
 -->
 <html>
+    <!-- Head files, not to be confused with the header. scripts, metatags etc are loaded here -->
     <head>
-        <!-- script includes -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="src/JS/main.js"></script>
         <script src="js/fantasy.constellation.js"></script>
@@ -39,7 +40,8 @@
                 $(document).prop('title', 'fantasy.constellation - ' + forum["username"]);
             } </script>
     </head>
-    <body>
+    < <body>
+        <include src="./components/head.html"></include>
         <main class="wrapper">
             <aside>
                 <div class="intro">
@@ -201,5 +203,5 @@
             </main>
             </div>
             <script src="src/js/hoxyz.js"></script>
-    </body>
+            </body>>
 </html>
