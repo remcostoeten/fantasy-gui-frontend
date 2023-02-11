@@ -1,3 +1,4 @@
+console.log('login.js');
 if (!local.get('key') == '') {
 	window.location = 'src/pages/menu.html';
 }
