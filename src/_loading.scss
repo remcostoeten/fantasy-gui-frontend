@@ -1,0 +1,80 @@
+.container {
+	display: grid;
+	place-items: center;
+}
+
+.loading {
+	display: flex;
+}
+
+.loading .ball {
+	width: 6px;
+	height: 6px;
+	border-radius: 0.5rem;
+	transition: transform 0.3s infinite;
+}
+
+.ball + .ball {
+	margin-left: 6px;
+}
+
+.loading .ball.one {
+	animation: loadingBall 0.5s infinite alternate;
+	background: #ff592930;
+}
+.loading .ball.two {
+	animation: loadingBall2 0.5s infinite 0.2s alternate;
+	background: #fc065130;
+}
+.loading .ball.three {
+	animation: loadingBall3 0.5s infinite 0.35s alternate;
+	background: #6cb94430;
+}
+.loading .ball.four {
+	animation: loadingBall4 0.5s infinite 0.5s alternate;
+	background: #2de2fa30;
+}
+
+@keyframes loadingBall {
+	0% {
+		transform: translateY(-10px) scale(1.2);
+		background: $color-primary;
+		box-shadow: 0 0 2px darken($color-primary, 5%);
+	}
+	100% {
+		transform: translateY(5px);
+	}
+}
+
+@keyframes loadingBall2 {
+	0% {
+		transform: translateY(-10px) scale(1.2);
+		background: $color-secondary;
+		box-shadow: 0 0 2px darken($color-primary, 5%);
+	}
+	100% {
+		transform: translateY(5px);
+	}
+}
+
+@keyframes loadingBall3 {
+	0% {
+		transform: translateY(-10px) scale(1.2);
+		background: $color-primary;
+		box-shadow: 0 0 2px darken($color-primary, 5%);
+	}
+	100% {
+		transform: translateY(5px);
+	}
+}
+
+@keyframes loadingBall4 {
+	0% {
+		transform: translateY(-10px) scale(1.2);
+		background: $color-secondary;
+		box-shadow: 0 0 2px darken($color-primary, 5%);
+	}
+	100% {
+		transform: translateY(5px);
+	}
+}

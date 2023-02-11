@@ -2,25 +2,45 @@
 <div class="pre-settings">
     <div class="pre-settings__toggles">
         <div class="toggle">
-            <input id="toggle" class="toggle__input" type='checkbox' name="pure_mode_silence">
-            <label class="toggle__label" for="pure_mode_silence"></label>
-            <span>Silence </span>
+            <div class="outer"> <input id="toggle" class="toggle__input" type='checkbox' name="pure_mode_silence">
+                <label class="toggle__label" for="pure_mode_silence"></label>
+                <span>Silence </span>
+            </div>
         </div>
         <div class="toggle">
-            <input id="toggle" class="toggle__input" type='checkbox' name="pure_mode_hypermode">
-            <label class="toggle__label" for="pure_mode_hypermode"></label>
-            <span>Constelia Hypermode</span>
+            <div class="outer"> <input id="toggle" class="toggle__input" type='checkbox' name="pure_mode_hypermode">
+                <label class="toggle__label" for="pure_mode_hypermode"></label>
+                <span>Constelia Hypermode</span>
+            </div>
         </div>
         <div class="toggle">
-            <input id="toggle" class="toggle__input" type='checkbox' name="pure_mode_always_update">
-            <label class="toggle__label" for="pure_mode_always_update"></label>
-            <span>Download latest GUI</span>
+            <div class="outer"> <input id="toggle" class="toggle__input" type='checkbox' name="pure_mode_always_update">
+                <label class="toggle__label" for="pure_mode_always_update"></label>
+                <span>Download latest GUI</span>
+            </div>
         </div>
     </div>
-    <button disabled id="start_button" onclick="start_constellation()">Loading...</button>
-    <button disabled id="hwid_spoofer" onclick="fantasy_cmd(this, 'hwid_spoofer')">HWID Spoofer/Trust Factor
-        Eraser</button>
-    <button disabled id="reload_scripts" onclick="fantasy_cmd(this, 'reload_scripts')">Reload Lua
-        Scripts</button>
-    <bsutton disabled id="exit_button" onclick="fantasy_cmd(this, 'exit')">Exit</bsutton>
+    <div class="pre-settings__functions">
+        <div class="skip">
+            <h2 onclick="start_constellation()" title="Skip and calibrate. Game is already running"
+                class="skip text-white-50">Skip
+                and
+                calibrate</h2>
+        </div>
+        <div class="buttons">
+            <button disabled id="start_button" onclick="start_constellation()">Loading<div class="container">
+                    <div class="loading">
+                        <div class="ball one"></div>
+                        <div class="ball two"></div>
+                        <div class="ball three"></div>
+                        <div class="ball four"></div>
+                    </div>
+                </div></button>
+            <button disabled id="hwid_spoofer" onclick="fantasy_cmd(this, 'hwid_spoofer')">HWID Spoofer/Trust Factor
+                Eraser</button>
+            <button disabled id="reload_scripts" onclick="fantasy_cmd(this, 'reload_scripts')">Reload Lua
+                Scripts</button>
+            <bsutton disabled id="exit_button" onclick="fantasy_cmd(this, 'exit')">Exit</bsutton>
+        </div>
+    </div>
 </div>

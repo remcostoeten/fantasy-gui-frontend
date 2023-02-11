@@ -266,6 +266,86 @@ table {
   border-spacing: 0;
 }
 
+.container {
+  display: grid;
+  place-items: center;
+}
+
+.loading {
+  display: flex;
+}
+
+.loading .ball {
+  width: 6px;
+  height: 6px;
+  border-radius: 0.5rem;
+  transition: transform 0.3s infinite;
+}
+
+.ball + .ball {
+  margin-left: 6px;
+}
+
+.loading .ball.one {
+  animation: loadingBall 0.5s infinite alternate;
+  background: rgba(255, 89, 41, 0.1882352941);
+}
+
+.loading .ball.two {
+  animation: loadingBall2 0.5s infinite 0.2s alternate;
+  background: rgba(252, 6, 81, 0.1882352941);
+}
+
+.loading .ball.three {
+  animation: loadingBall3 0.5s infinite 0.35s alternate;
+  background: rgba(108, 185, 68, 0.1882352941);
+}
+
+.loading .ball.four {
+  animation: loadingBall4 0.5s infinite 0.5s alternate;
+  background: rgba(45, 226, 250, 0.1882352941);
+}
+
+@keyframes loadingBall {
+  0% {
+    transform: translateY(-10px) scale(1.2);
+    background: #545399;
+    box-shadow: 0 0 2px #4b4a88;
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes loadingBall2 {
+  0% {
+    transform: translateY(-10px) scale(1.2);
+    background: #fff;
+    box-shadow: 0 0 2px #4b4a88;
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes loadingBall3 {
+  0% {
+    transform: translateY(-10px) scale(1.2);
+    background: #545399;
+    box-shadow: 0 0 2px #4b4a88;
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes loadingBall4 {
+  0% {
+    transform: translateY(-10px) scale(1.2);
+    background: #fff;
+    box-shadow: 0 0 2px #4b4a88;
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
 aside h2 {
   font-size: 24px;
   padding-bottom: 24px;
@@ -280,15 +360,59 @@ aside__launch img {
   margin-right: 12px;
 }
 aside .toggle {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid #373946;
   padding: 12px;
+  transition: 250ms ease all;
+  position: relative;
+  min-height: 48px;
+  max-height: 48px;
+  padding: 0;
+  position: relative;
+}
+aside .toggle:before {
+  content: "";
+  height: 48px;
+  width: 3px;
+  background-color: transparent;
+  left: 0;
+}
+aside .toggle:first-child {
+  border-top: 1px solid #373946;
+}
+aside .toggle:hover {
+  background: #403d51;
+}
+aside .toggle:hover:before {
+  background-color: #545399;
+}
+aside .toggle:hover:after {
+  opacity: 1;
 }
 
+.pre-settings .outer {
+  display: flex;
+  align-items: center;
+  padding: 0 36px;
+}
 .pre-settings__toggles {
-  margin-bottom: 24px;
+  margin: 0 -36px 24px -36px;
+}
+.pre-settings__functions .buttons {
+  display: flex;
+  flex-direction: column;
+}
+.pre-settings__functions .buttons button {
+  border: none;
+  color: #fbfbfb;
+  padding: 8px;
 }
 
-.game__csgo, .game__dota, .game__tf2 {
+.game__csgo,
+.game__dota,
+.game__tf2,
+.buttons button {
   display: flex;
   align-items: center;
   padding: 8px;
@@ -301,10 +425,16 @@ aside .toggle {
   overflow: hidden;
   position: relative;
 }
-.game__csgo:last-child, .game__dota:last-child, .game__tf2:last-child {
+.game__csgo:last-child,
+.game__dota:last-child,
+.game__tf2:last-child,
+.buttons button:last-child {
   margin-bottom: 24px;
 }
-.game__csgo:after, .game__dota:after, .game__tf2:after {
+.game__csgo:after,
+.game__dota:after,
+.game__tf2:after,
+.buttons button:after {
   content: "";
   display: none;
   width: 100%;
@@ -312,7 +442,10 @@ aside .toggle {
   position: absolute;
   z-index: 1;
 }
-.game__csgo:before, .game__dota:before, .game__tf2:before {
+.game__csgo:before,
+.game__dota:before,
+.game__tf2:before,
+.buttons button:before {
   content: "";
   display: none;
   width: 100%;
@@ -320,22 +453,34 @@ aside .toggle {
   position: absolute;
   z-index: 1;
 }
-.game__csgo:hover:after, .game__dota:hover:after, .game__tf2:hover:after {
+.game__csgo:hover:after,
+.game__dota:hover:after,
+.game__tf2:hover:after,
+.buttons button:hover:after {
   animation: bgcard 1s;
   opacity: 0.3;
   display: blocck;
   scale: 10;
 }
-.game__csgo:hover:before, .game__dota:hover:before, .game__tf2:hover:before {
+.game__csgo:hover:before,
+.game__dota:hover:before,
+.game__tf2:hover:before,
+.buttons button:hover:before {
   animation: bgcardTwo 1s 15ms;
   opacity: 0.3;
   display: block;
   scale: 10;
 }
-.game__csgo:hover img, .game__dota:hover img, .game__tf2:hover img {
+.game__csgo:hover img,
+.game__dota:hover img,
+.game__tf2:hover img,
+.buttons button:hover img {
   animation: rotate 1s infinite ease-in-out;
 }
-.game__csgo img, .game__dota img, .game__tf2 img {
+.game__csgo img,
+.game__dota img,
+.game__tf2 img,
+.buttons button img {
   scale: 0.7;
   padding-right: 12px;
 }
