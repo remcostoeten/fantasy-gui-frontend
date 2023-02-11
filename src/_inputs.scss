@@ -1,44 +1,57 @@
-// input
-.toggle-input {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 5;
-	opacity: 0;
-	cursor: pointer;
-}
-
-// label
-.toggle-label {
-	width: 36px;
-	height: 21px;
-	background: $input-color;
+.toggle {
+	display: flex;
+	align-items: center;
 	position: relative;
-	display: inline-block;
-	border-radius: 46px;
-	transition: 0.4s;
-	box-sizing: border-box;
-	&:after {
-		content: '';
+
+	&__input {
 		position: absolute;
-		width: 21px;
-		height: 21px;
-		border-radius: 100%;
 		left: 0;
 		top: 0;
-		z-index: 2;
-		background: $color-white;
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	&__label {
+		width: 36px;
+		height: 21px;
+		background: $input-color;
+		position: relative;
+		display: inline-block;
+		border-radius: 46px;
 		transition: 0.4s;
+		box-sizing: border-box;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 21px;
+			height: 21px;
+			border-radius: 100%;
+			left: 0;
+			top: 0;
+			z-index: 2;
+			background: $color-white;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+			transition: 0.4s;
+		}
+	}
+
+	span {
+		margin-left: $spacing;
 	}
 }
 
-// input:ckeecked
-.toggle-input:checked {
-	+ .toggle-label {
+input[type='checkbox' i] {
+	margin: 0;
+}
+
+.toggle__input:checked {
+	+ .toggle__label {
 		background-color: $color-primary;
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 		&:after {
 			left: 20px;
@@ -52,13 +65,6 @@ p {
 	font-weight: bold;
 }
 
-.toggle-switch {
-	display: flex;
-	align-items: center;
-	position: relative;
-	margin-bottom: $spacing-s;
-
-	span {
-		margin-left: $spacing-s;
-	}
+login {
+	display: none;
 }

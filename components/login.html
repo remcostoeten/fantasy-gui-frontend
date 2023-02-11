@@ -6,16 +6,14 @@
                     <div class="card-body p-5 text-center">
                         <div class="mb-md-5 mt-md-4 pb-5">
                             <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                            <p class="text-white-50 mb-5">Please enter your license key in order to use
-                                Pegasus!</p>
+                            <p class="text-white-50 mb-5">Please enter your license key in order to use Pegasus!</p>
                             <div class="form-outline form-white mb-4">
                                 <input onkeyup="this.value = this.value.toUpperCase();" type="password" id="inputID"
                                     class="form-control form-control-lg" maxlength="19">
                                 <label class="form-label" for="inputID">License Key</label>
                             </div>
                             <div class="d-flex justify-content-around align-items-center mb-4">
-                                <a class="text-white-50" href="https://fantasy.cat/forums/index.php">Forgot
-                                    your license
+                                <a class="text-white-50" href="https://fantasy.cat/forums/index.php">Forgot your license
                                     key?</a>
                             </div>
                             <button class="btn btn-outline-light btn-lg px-5" type="submit" id="submit">Login</button>
@@ -26,13 +24,3 @@
         </div>
     </div>
 </section>
-<script>
-    function submit() {
-        const x = document.getElementById('submit');
-        x.addEventListener('click', () => {
-            alert('test');
-        });
-    }
-    submit();
-
-</script>

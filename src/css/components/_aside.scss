@@ -16,6 +16,17 @@ aside {
 			margin-right: $spacing;
 		}
 	}
+
+	.toggle {
+		border-bottom: 1px solid $border-color;
+		padding: $spacing;
+	}
+}
+
+.pre-settings {
+	&__toggles {
+		margin-bottom: $spacing-xl;
+	}
 }
 
 .game {
@@ -33,6 +44,10 @@ aside {
 		font-weight: 600px;
 		overflow: hidden;
 		position: relative;
+
+		&:last-child {
+			margin-bottom: $spacing-xl;
+		}
 
 		&:after {
 			content: '';
